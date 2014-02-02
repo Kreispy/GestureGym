@@ -1,4 +1,6 @@
-package com.example.gesturegym;
+package edu.upenn.cis.gesturegym;
+
+import com.example.gesturegym.R;
 
 import android.os.Bundle;
 import android.app.Activity;
