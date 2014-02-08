@@ -19,6 +19,7 @@ public class Sequence {
 		for (int i = 0; i < cues.length; i++) {
 			this.cues[i] = cues[i];
 			
+			// set up times
 			if (i == 0)	startTimes[i] = 0;
 			else        startTimes[i] = startTimes[i - 1] + timeBetweenCues;
 			
