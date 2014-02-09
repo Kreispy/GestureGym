@@ -26,4 +26,33 @@ public class Sequence {
 			endTimes[i] = startTimes[i] + duration;
 		}
 	}
+	
+	public int length() {
+		return cues.length;
+	}
+	
+	public TapCue getCue(int index) {
+		return cues[index];
+	}
+	
+	// Given a time, returns the index of the last cue that should have
+	// been started by this time.
+	public int cueToStart(double time) {
+		for (int i = 0; i < startTimes.length; i++) {
+			if (time < startTimes[i]) return i - 1;
+		}
+		
+		return startTimes.length - 1;
+	}
+	
+	// Given a time, returns the index of the last cue that should have
+	// been stopped by this time.
+	public int cueToStop(double time) {
+		for (int i = 0; i < endTimes.length; i++) {
+			if (time < endTimes[i]) return i - 1;
+		}
+		
+		return endTimes.length - 1;
+	}
+	
 }
