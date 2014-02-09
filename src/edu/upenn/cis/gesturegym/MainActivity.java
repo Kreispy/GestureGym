@@ -6,12 +6,17 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        Parse.initialize(this, "a9fgXH8y5WZxzucfA8ZrPOdQ6dEEsSLHfhykvyzY", "fvjFSvTnypy9zgLEiXbv3kgC3YhlY2zt4MvssEP3");
     }
 
 
